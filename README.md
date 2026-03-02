@@ -9,7 +9,7 @@ The project focuses on clean architecture, state management, and frontend best p
 
 ## 🚀 Live Demo
 
-[Live Application](https://your-vercel-url.vercel.app)
+[Live Application](https://client-flow-bay.vercel.app/)
 
 ---
 
@@ -48,15 +48,16 @@ The project focuses on clean architecture, state management, and frontend best p
 ---
 
 ## 📂 Project Structure
+```bash
 src/
 ├── components/
 ├── hooks/
 ├── types/
 ├── pages/
 └── services/
+```
 
 ---
-
 
 - `hooks/` contains logic abstraction (e.g. useClients, useDebounce).
 - `components/` contains reusable UI components.
@@ -70,17 +71,22 @@ src/
 Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/clientflow.git
+git clone https://github.com/Guillermo-Ramirez-Jimenez/ClientFlow.git
 cd clientflow
 npm install
+```
 
 Run in development:
 
+```bash
 npm run dev
+```
 
 Build for production:
 
+```bash
 npm run build
+```
 
 ---
 
