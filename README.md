@@ -1,73 +1,103 @@
-# React + TypeScript + Vite
+# ClientFlow
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ClientFlow is a lightweight client management application built with React and TypeScript.  
+It allows users to create, edit, delete, filter, and sort clients through a clean and responsive interface.
 
-Currently, two official plugins are available:
+The project focuses on clean architecture, state management, and frontend best practices.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Live Demo
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+[Live Application](https://your-vercel-url.vercel.app)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📌 Features
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Create, edit and delete clients (CRUD)
+- Search with debounce
+- Filter by status
+- Sort by different fields (ascending/descending)
+- Loading overlay with animation
+- Responsive layout
+- Clean component structure
+- Basic UI transitions for improved UX
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🛠 Tech Stack
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- **React**
+- **TypeScript**
+- **TailwindCSS**
+- Custom Hooks
+- Vite
+- Deployed on Vercel
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🧠 Architecture & Decisions
+
+- Business logic is separated from UI components using custom hooks.
+- Filtering and sorting are memoized to avoid unnecessary recalculations.
+- Loading and error states are handled explicitly to improve user feedback.
+- Components are modular and reusable.
+- The structure allows replacing the mock backend with a real REST API easily.
+
+---
+
+## 📂 Project Structure
+src/
+├── components/
+├── hooks/
+├── types/
+├── pages/
+└── services/
+
+---
+
+
+- `hooks/` contains logic abstraction (e.g. useClients, useDebounce).
+- `components/` contains reusable UI components.
+- `types/` centralizes TypeScript definitions.
+- `pages/` contains main views.
+
+---
+
+## ⚙️ Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/yourusername/clientflow.git
+cd clientflow
+npm install
+
+Run in development:
+
+npm run dev
+
+Build for production:
+
+npm run build
+
+---
+
+## 🔮 Possible Improvements
+
+Replace mock API with a real backend (REST + database)
+
+Add authentication and user roles
+
+Implement server-side filtering & pagination
+
+Add unit and integration tests
+
+Improve accessibility (ARIA roles, keyboard navigation)
+
+---
+
+## 📄 License
+
+This project is open for learning and portfolio purposes.
